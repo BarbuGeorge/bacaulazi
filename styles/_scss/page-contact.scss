@@ -1,0 +1,101 @@
+.page-contact-wrapper{
+	.page-contact{
+			@extend .position-relative;
+			background:url('../../images/contact-cover.jpg');
+			background-size:cover;
+			&:after{
+				@extend .position-absolute;
+				content: "";
+				left: 0; right: 0;
+				top: 0; bottom: 0;
+				background: rgba(0,0,0,.5);
+				height:100%;
+				width:100%;
+				z-index:1;
+			}
+		.form-section{
+			@extend .position-relative;
+			overflow-y:hidden;
+			z-index:3;
+			@include media-breakpoint-down(lg){
+				padding:0!important;
+			}
+			.form-description-wrapper{
+				@include media-breakpoint-down(lg){
+					position:relative;
+					padding:2rem 1.5rem;
+				}
+				@extend .d-flex, .flex-column, .justify-content-center;
+				&:before{
+					content:'';
+					@extend .position-absolute, .start-0, .top-0;
+					background: rgba( 144, 0, 2, 0.35 );
+					backdrop-filter: blur( 20px );
+					-webkit-backdrop-filter: blur( 20px );
+					height:100%;
+					width:50%;
+					@include media-breakpoint-down(lg){
+						width:100%!important;
+					}
+				}
+				.form-description{
+					@extend .text-center;
+					@extend .text-white;
+					@extend .position-relative;
+					z-index:99;
+				}
+			}
+			.form-column-wrapper{
+				@include media-breakpoint-down(lg){
+					position:relative;
+				}
+				&:before{
+					content:'';
+					@extend .position-absolute, .end-0, .top-0;
+					background:$white;
+					height:100%;
+					width:50%;
+					@include media-breakpoint-down(lg){
+						width:100%!important;
+					}
+				}
+				.form-column{
+					@extend .bg-white;
+					@extend .py-6, .px-6;
+					@extend .position-relative;
+					z-index:99;
+					@include media-breakpoint-down(lg){
+						padding-left:0!important;
+						padding-right:0!important;
+					}
+					.form-contact{
+						label{
+							@extend .text-muted;
+							font-size:0.7rem;
+						}
+						input:not(.wpcf7-submit), textarea{
+							@extend .bg-transparent;
+							width:100%;
+							border:0;
+							border-bottom:2px solid $primary;
+							&:focus{
+								@extend .shadow-none;
+								outline:0;
+							}
+						}
+						.wpcf7-submit{
+							@extend .btn, .btn-primary;
+							@extend .text-white;
+						}
+					}
+				}
+			}
+		}
+		footer{
+			border-top:0!important;
+		}
+	}
+	footer{
+		border-top:0!important;
+	}
+}

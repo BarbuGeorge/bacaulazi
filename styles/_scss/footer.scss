@@ -1,0 +1,72 @@
+footer{
+	@extend .container;
+	@extend .px-0;
+	@extend  .border-2, .border-top, .border-primary;
+	font-family: $font-family-sans-serif;
+
+	.logo-path{
+		fill:$primary!important;
+	}
+
+	.menu{
+
+		@extend .d-lg-flex, .d-block;
+
+		@include media-breakpoint-down(lg){
+
+			li{
+				display:block;
+			}
+
+			column-count:2;
+		}
+
+		li{
+			@extend .py-lg-4, .py-3;
+			a{
+				@extend .text-dark;
+				@extend .px-lg-2, .px-0, .py-lg-4, .py-3;
+			}
+			&:hover{
+				a{
+					color:$primary!important;
+				}
+			}
+		}
+	}
+
+	.footer-logo{
+		@extend .text-uppercase;
+	}
+
+	hr{
+		margin-top:-1.3rem;
+	}
+
+	.logo-svg{
+		width:15rem;
+		height:auto;
+		fill:#900002!important;
+	}
+
+	.footer-news-wrapper{
+		@include media-breakpoint-down(lg){
+			overflow-y:scroll;
+		}
+		&::-webkit-scrollbar{
+			display:none;
+		}
+		.footer-news{
+			img{
+				width:7rem;
+				height:auto;
+			}
+			.title{
+				font-size:0.8rem;
+			}
+			.date{
+				font-size:0.65rem;
+			}
+		}
+	}
+}

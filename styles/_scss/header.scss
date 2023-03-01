@@ -1,0 +1,134 @@
+.navbar{
+	@extend .py-0;
+	@include media-breakpoint-down(lg){
+		background:$primary;
+	}
+	.navbar-brand-wrapper{
+		@extend .w-100;
+		@extend .d-flex;
+		@extend .py-3;
+		@extend .full-width-bg-primary;
+		@include media-breakpoint-down(lg){
+			width:auto!important;
+		}
+		.navbar-brand{
+			@extend .mx-auto;
+			z-index:2;
+			img{
+				width:12rem;
+				height:auto;
+				@include media-breakpoint-down(lg){
+					width:7rem!important;
+				}
+			}
+		}
+	}
+	.navbar-toggler-hamburger{
+		@extend .rounded-0;
+		@extend .shadow-none;
+		@extend .border-0;
+		@extend .position-relative;
+		z-index:2;
+		> label{
+			align-items:end;
+		}
+		label{
+			display:flex;
+			 flex-direction:column;
+			 width:5rem;
+			 cursor:pointer;
+		   }
+
+		   label span{
+			 background: #fff;
+			 height:2px;
+			 margin: 5px 0;
+			 transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+		   }
+
+		   span:nth-of-type(1){
+			 width:30%;
+
+		   }
+		   span:nth-of-type(2){
+			 width:45%;
+		   }
+		   span:nth-of-type(3){
+			 width:35%;
+		   }
+		   input[type="checkbox"]{
+			 display:none;
+		   }
+		   input[type="checkbox"]:checked ~ span:nth-of-type(1){
+			 transform-origin:bottom;
+			 transform:rotatez(45deg) translate(1px,9px)
+		   }
+		   input[type="checkbox"]:checked ~ span:nth-of-type(2){
+
+			 transform-origin:top;
+			 transform:rotatez(-45deg)
+		   }
+		   input[type="checkbox"]:checked ~ span:nth-of-type(3){
+			 transform-origin:bottom;
+			 width:35%;
+			 transform: translate(0px,-13px) rotatez(45deg);
+		   }
+		   input[type="checkbox"]:checked ~ span:nth-of-type(2){
+
+			width:40%;
+
+		  }
+	}
+
+	.navbar-collapse{
+		@extend .h-100;
+		@include media-breakpoint-down(lg){
+			#search-form{
+				border-bottom:1px solid $white!important;
+			}
+			transform: scaleY(0);
+			transform-origin: top;
+			transition: transform 0.2s ease;
+			&.show{
+				transform: scaleY(1);
+				transition: transform 0.2s ease;
+			}
+		}
+		.menu-nav-menu-container{
+			.menu{
+				@extend .d-flex;
+				@extend .justify-content-lg-center, .justify-content-start;
+				@extend .position-relative;
+				@extend .mb-0;
+				z-index:2;
+				@include media-breakpoint-down(lg){
+					display:block!important;
+				}
+
+				li{
+					@extend .py-lg-4, .py-3;
+					a{
+						@extend .px-lg-2, .px-0, .py-lg-4, .py-3;
+						@extend .text-dark;
+						font-family: $font-family-sans-serif;
+						@include media-breakpoint-down(lg){
+							color:$light!important;
+						}
+						@include media-breakpoint-down(lg){
+							font-size:1.2rem;
+						}
+					}
+					&:hover{
+						a{
+							color:$primary!important;
+						}
+					}
+				}
+			}
+		}
+		.search-icon{
+			cursor:pointer;
+		}
+	}
+}

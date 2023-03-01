@@ -1,0 +1,75 @@
+.single-post{
+	p{
+		@extend .mb-4;
+	}
+	.single-post-hero{
+		@extend .position-relative;
+		@extend .h-100;
+		background-size: cover!important;
+		background-position: center center!important;
+		background-repeat:no-repeat!important;
+		padding:15rem 0!important;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: #002f4b;
+			opacity: .5;
+			z-index:1;
+		}
+		.single-post-hero-text{
+			@extend .container;
+			@extend .d-flex, .flex-column;
+			@extend .position-relative;
+			@extend .w-100, .h-100;
+			@extend .d-flex;
+			@extend .justify-content-center;
+			@extend .align-items-center;
+			z-index:2;
+		}
+	}
+	.avatar{
+		@extend .rounded-circle;
+		@extend .mb-2;
+	}
+	.details{
+		font-size:0.75rem;
+	}
+	.single-post-content{
+		@extend .container;
+		@extend .px-lg-20, .px-4;
+		@extend .my-10;
+	}
+	.share-post{
+		@extend .text-center;
+		@extend .mt-8;
+		.share-icons{
+			@extend .d-flex ,.align-items-center, .justify-content-center;
+			a{
+				@extend .text-dark;
+				@extend .px-3, .py-3;
+			}
+		}
+	}
+	.tags{
+		@extend .mt-6;
+		@extend .d-flex;
+		font-size:0.7rem;
+		color:$gray-300!important;
+		.my-tags-list{
+			@extend .ms-2;
+			flex-wrap:wrap;
+			li{
+				&:not(:first-child, :last-child){
+					@extend .mx-1;
+				}
+				a{
+					color:$gray-300!important;
+				}
+			}
+		}
+	}
+}

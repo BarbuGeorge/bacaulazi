@@ -1,0 +1,130 @@
+// ---------------------------------------------------
+// COLORS
+
+$primary: 		#900002;
+$secondary: 	#FFFF;
+$success: 		#198754;
+$info: 			#0dcaf0;
+$warning: 		#FAE17C;
+$danger: 		#FF0000;
+$dark: 			#252525;
+$light: 		#F4F4F4;
+$blue-dark:		#2B2D42;
+$light-grey:	#f2f2f2;
+
+
+$gray-300: 		#adb5bd;
+$light-grey:	$light-grey;
+
+
+$text-muted: 	$gray-300;
+
+$body-color: 	$dark;
+
+// ---------------------------------------------------
+// THEME EXTEND
+$theme-colors: (
+	"primary":		$primary,
+	"secondary":	$secondary,
+	"success":		$success,
+	"info":			$info,
+	"warning":		$warning,
+	"danger":		$danger,
+	"light":		$light,
+	"dark":			$dark,
+	"blue-dark":	$blue-dark
+);
+
+// ---------------------------------------------------
+// SPACINGS, EXTEND m-x, p-x
+$spacer: 1rem;
+$spacers: (
+	0: 0,
+	1: ($spacer * .25),
+	2: ($spacer * .5),
+	3: ($spacer),
+	4: ($spacer * 1.5),
+	5: ($spacer * 2),
+	6: ($spacer * 2.5),
+	7: ($spacer * 3),
+	8: ($spacer * 3.5),
+	9: ($spacer * 4),
+	10: ($spacer * 5),
+	11: ($spacer * 5.5),
+	12: ($spacer * 6),
+	13: ($spacer * 7),
+	14: ($spacer * 7.5),
+	15: ($spacer * 8),
+	16: ($spacer * 8.5),
+	17: ($spacer * 9),
+	18: ($spacer * 9.5),
+	19: ($spacer * 10),
+	20: ($spacer * 10.5),
+	21: ($spacer * 11),
+	22: ($spacer * 11.5),
+	23: ($spacer * 12),
+	24: ($spacer * 12.5),
+);
+
+
+// ---------------------------------------------------
+// OVERRIDES // PUT EVERYTHING HERE !!!!!!!!!
+$enable-negative-margins: 	true;
+
+$font-family-sans-serif: "Montserrat", sans-serif;
+$headings-font-family: $font-family-sans-serif;
+
+$font-family-base: "Rubik";
+
+$font-size-base: 			1rem;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+
+$headings-margin-bottom:$spacer * 1.9;
+
+// Font Sizes
+$h1-font-size: $font-size-base * 3.8;
+$h2-font-size: $font-size-base * 3;
+$h3-font-size: $font-size-base * 2.8;
+$h4-font-size: $font-size-base * 2.2;
+$h5-font-size: $font-size-base * 1.7;
+
+$headings-line-height: 1.2;
+$headings-font-weight:	$font-weight-bold;
+$font-weight-base:		$font-weight-normal;
+
+// Line Height
+$line-height-base: 		1.5;
+
+$input-btn-padding-y: 	0.5rem;
+$input-btn-padding-x: 	1rem;
+
+//Columns
+$grid-gutter-width: 	4rem;
+
+//Links
+$link-decoration: 		none;
+$link-color: 			$primary;
+
+//Buttons
+$btn-font-weight: 					$font-weight-bold;
+$btn-padding-y: 					$input-btn-padding-y;
+$btn-padding-x: 					$input-btn-padding-x;
+
+$btn-close-color: 					$light;
+$input-font-weight:					$font-weight-base;
+
+// Grid
+$grid-gutter-width:					 2.5rem !default;
+
+// Box Shadow
+$box-shadow:                  	     0px 8px 24px rgba(149, 157, 165, 0.2);
+//-----------------------------------------------------
+
+// Card
+$card-border-width:                 0;
+
+
+//
+$navbar-toggler-transition:         box-shadow .5s ease-in-out;

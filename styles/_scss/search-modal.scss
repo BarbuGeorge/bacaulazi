@@ -1,0 +1,15 @@
+.search-modal{
+	.modal-dialog{
+		transform:translate(0 , 300%)!important;
+		.modal-content{
+			@extend .bg-transparent;
+			@extend .border-0;
+			.modal-header{
+				@extend .pb-2;
+			}
+		}
+	}
+	.btn-close{
+		@extend .shadow-none;
+	}
+}

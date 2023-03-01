@@ -1,0 +1,50 @@
+//
+.full-width-bg-primary{
+	@extend .position-relative;
+	&:before{
+		content:'';
+		@extend .position-absolute;
+		@extend .top-0;
+		@extend .mx-auto;
+		@extend .bg-primary;
+		height:100%;
+		width:100vw;
+		z-index:1;
+	}
+}
+//
+
+//
+hr{
+	&.primary{
+		border-color:$primary;
+	}
+	&.gray{
+		border-color:#B2B2B2;
+	}
+}
+//
+
+//
+.search-input{
+	@extend .bg-transparent;
+	@extend .border-0;
+	font-size:1.2rem;
+	@extend .text-light;
+	&:focus{
+		@extend .shadow-none;
+		outline:none;
+	}
+}
+//
+//
+.btn{
+	@extend .text-uppercase;
+	border-radius:0!important;
+	font-size:0.8rem;
+	letter-spacing:2px;
+}
+//
+p{
+	letter-spacing:1.15px;
+}

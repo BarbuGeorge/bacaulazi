@@ -1,0 +1,11 @@
+html,body{
+	@extend .overflow-x-hidden;
+	@extend .overflow-y-visible;
+	min-height:100%;
+	height:100%;
+}
+
+section{
+	@extend .container;
+	@extend .py-md-10, .py-5;
+}

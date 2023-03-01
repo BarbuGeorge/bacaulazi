@@ -1,0 +1,13 @@
+.page-home{
+	.alte-stiri, .ultimele-stiri{
+		.card{
+			@extend .small-title;
+			@extend .small-image;
+		}
+	}
+	.news{
+		&:last-of-type{
+			@extend .mb-12;
+		}
+	}
+}
